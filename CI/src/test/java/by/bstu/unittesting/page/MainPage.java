@@ -102,6 +102,7 @@ public class MainPage extends AbstractPage {
         fillInOrigin(route);
         fillInDestination(route);
         departureDateInput.click();
+        departureDateInput.click();
         driver.findElement(By.linkText(route.getDepartureDay())).click();
         logger.info("Route information filled");
         return this;
