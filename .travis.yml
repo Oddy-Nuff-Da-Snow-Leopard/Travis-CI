@@ -1,0 +1,12 @@
+language: java
+sudo: false
+jdk:
+  - openjdk8
+services:
+  - xvfb
+addons:
+  chrome: stable
+before_script:
+  cd CI/
+script:
+  - mvn -Dbrowser=chrome -Dsurefire.suiteXmlFiles=src/test/resources/testing-all.xml -Denvironment=dev clean test
